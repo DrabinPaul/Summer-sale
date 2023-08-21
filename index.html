@@ -7,20 +7,37 @@
   <title>Summer Sale Landing Page</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- font styles  -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
+
+  <!-- font awesome  -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- styles  -->
+
   <style>
     .worksans {
       font-family: 'Work Sans', sans-serif;
+    }
+
+    .fa-star {
+      font-size: 32px;
     }
   </style>
 </head>
 
 <body class="worksans">
+
+  <!-- banner section  -->
+
   <header class="bg-[#F9F6E2]">
     <div class="hero max-w-screen-xl p-5 md:p-16 mx-auto lg:pt-16 pb-16">
       <div class="hero-content flex-col lg:flex-row-reverse">
@@ -35,75 +52,80 @@
         </div>
       </div>
     </div>
-
   </header>
+
+
+  <!-- main section  -->
+
+
   <main class="bg-[#F8F8F8]">
 
     <section class="max-w-screen-xl mx-auto md:p-16">
 
-      <div class="flex flex-col lg:flex-row gap-5">
+      <div class="flex flex-col lg:flex-row gap-5 " id="product-container">
 
-        <div class="pt-16">
+        <div class="lg:pt-16">
 
-          <!-- kitchenware section  -->
+          <!-- kitchenware container  -->
 
-          <h3 class="text-5xl font-bold text-center md:text-left pb-5">Kitchenware</h3>
+          <h3 class="text-5xl font-bold text-center md:text-left pb-5 pt-5">Kitchenware</h3>
 
           <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
             <!-- card-1  -->
 
-            <div class="bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1]  rounded-2xl flex justify-center p-10">
+            <div onclick="handleProduct(this)" class="bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5 rounded-2xl flex justify-center p-5">
                 <img src="./images/prod1.png" alt="">
               </div>
-              <div class="">
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+              <div>
+                <div class="flex justify-center pt-4">
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2">K. Accessories</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">39.00 TK</h4>
+                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2 item-name">K. Accessories</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">39.00 TK</h4>
               </div>
             </div>
 
             <!-- card-2  -->
 
-            <div class=" bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1]  rounded-2xl flex justify-center p-9">
+            <div onclick="handleProduct(this)" class=" bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5  rounded-2xl flex justify-center p-5">
                 <img src="./images/prod2.png" alt="">
               </div>
               <div>
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                <div class="flex justify-center pt-4">
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2">K. Accessories</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">25.00 TK</h4>
+                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2 item-name">K. Accessories</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">25.00 TK</h4>
               </div>
             </div>
 
             <!-- card-3  -->
 
-            <div class=" bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1] rounded-2xl flex justify-center p-10">
+            <div onclick="handleProduct(this)" class=" bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5  rounded-2xl flex justify-center p-5">
                 <img src="./images/prod3.png" alt="">
               </div>
               <div>
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                <div class="flex justify-center pt-4">
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2">K. Accessories</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">49.00 TK</h4>
+                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2 item-name">Home Cooker</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">49.00 TK</h4>
               </div>
             </div>
           </div>
@@ -116,58 +138,58 @@
 
             <!-- card-1  -->
 
-            <div class="bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1]  rounded-2xl flex justify-center p-16">
+            <div onclick="handleProduct(this)" class="bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5 rounded-2xl flex justify-center p-5">
                 <img src="./images/prod4.png" alt="">
               </div>
               <div class="">
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                <div class="flex justify-center pt-4">
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2">Sports Back Cap</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">49.00 TK</h4>
+                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2 item-name">Sports Back Cap</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">49.00 TK</h4>
               </div>
             </div>
 
             <!-- card-2  -->
 
-            <div class=" bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1]  rounded-2xl flex justify-center p-8">
+            <div onclick="handleProduct(this)" class=" bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5  rounded-2xl flex justify-center p-5">
                 <img src="./images/prod5.png" alt="">
               </div>
               <div>
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                <div class="flex justify-center pt-4">
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-xl text-[#111] text-center pt-4 pb-2">Full Jersey Set</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">69.00 TK</h4>
+                <h3 class="font-bold text-xl text-[#111] text-center pt-4 pb-2 item-name">Full Jersey Set</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">69.00 TK</h4>
               </div>
             </div>
 
             <!-- card-3  -->
 
-            <div class=" bg-[#fff] p-4">
-              <div class="bg-[#F1F1F1] rounded-2xl flex justify-center p-8">
+            <div onclick="handleProduct(this)" class=" bg-[#fff] p-4 md:w-[270px] rounded-md">
+              <div class="bg-[#F1F1F1] h-2/5 rounded-2xl flex justify-center p-5">
                 <img src="./images/prod6.png" alt="">
               </div>
               <div>
-                <div class="rating rating-lg flex justify-center pt-4">
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                <div class="flex justify-center pt-4">
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-solid fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
+                  <i class="fa-regular fa-star" style="color: #FFC107FF;"></i>
                 </div>
-                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2">Sports cates</h3>
-                <h4 class="text-3xl text-center text-[#11111180]">159.00 TK</h4>
+                <h3 class="font-bold text-2xl text-[#111] text-center pt-4 pb-2 item-name">Sports cates</h3>
+                <h4 class="text-3xl text-center text-[#11111180] item-price">159.00 TK</h4>
               </div>
             </div>
           </div>
@@ -175,39 +197,59 @@
 
         </div>
 
-        <div class="pt-5 md:pt-32">
+        <div class="pt-6 lg:mt-32">
 
-          <!-- calculate container  -->
-          <div class="w-[300px] h-[150px] rounded p-5 bg-white">
+          <!-- cupon container  -->
+          <div class="w-[300] h-[150px] rounded p-4 bg-white">
             <div class="">
-              <h1 class="text-2xl font-semibold pb-2">Have coupon?</h1>
-               <p>
-                <input class="w-40 p-2 py-2 text-xl border" type="text" placeholder="Coupon code">
-                <button class="bg-[#E527B2] md:-ml-2 px-5 py-2 rounded-r-md text-xl text-[white]">Apply</button>
-               </p>
+              <h1 class="text-2xl font-semibold pb-2 text-center lg:text-left">Have coupon?</h1>
+              <p class="flex justify-center">
+                <input id="inputField" class="w-full md:w-40 p-2 py-2 text-xl border" type="text"
+                  placeholder="Coupon code">
+                <button onclick="handleDiscount()" disabled id="applyButton"
+                  class="bg-[#d39bc5] md:-ml-2 px-3 py-2 rounded-r-md text-xl text-[white]">Apply</button>
+              </p>
             </div>
 
           </div>
 
           <!-- calculate container  -->
-          <div class="w-[300px] h-[400px] mt-5 rounded p-5 bg-white">
-            <div class="text-2xl">
-              <div id="calculation-entry" class="h-[150px]">
-                
+          <div class="w-[300] mt-5 rounded p-5 bg-white">
+            <div class="text-xl font-semibold text-center lg:text-left">
+              <div id="calculation-entry" class="">
 
               </div>
               <hr>
-              <h4>Total Price:</h4>
-              <h4>Discount:</h4>
-              <h4>Total:</h4>
-
-              
+              <h4 class="total-price pt-2 pb-2 text-center lg:text-left">Total Price: <span
+                  id="total-dollar">0.00</span>TK</h4>
+              <h4 class="text-center lg:text-left">Discount: <span id="discount-amount">0.00</span>TK</h4>
+              <h4 class="pt-2 pb-2 text-center lg:text-left">Total: <span id="total-final">0.00</span>TK</h4>
             </div>
 
+            <!-- purchase container  -->
+
           </div>
-          <!-- <div class=" flex justify-center md:-mt-5">
-            <button class="bg-[#E527B2] w-5/6 rounded-md px-4 py-2 text-xl text-[white]">Make Purchase</button>
-          </div> -->
+          <div class=" flex justify-center md:-mt-5 pb-5">
+            <button disabled onclick="my_modal_5.showModal()" id="purchase-btn"
+              class="bg-[#d39bc5] w-5/6 rounded-md px-4 py-2 text-xl text-[white]">Make
+              Purchase</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <div class="flex justify-center pb-5">
+                  <img src="./images/congo.png" alt="">
+                </div>
+                <div class="text-center">
+                  <h2 class="font-bold text-4xl pb-2">Congratulations</h2>
+                  <p class="text-normal">Your Purchase the product</p>
+                </div>
+                <div class="modal-action flex justify-center">
+                  <button onclick="handleReload()" class="btn bg-[#E527B2] text-[white]">Go Home</button>
+                </div>
+              </form>
+            </dialog>
+
+
+          </div>
         </div>
 
       </div>
